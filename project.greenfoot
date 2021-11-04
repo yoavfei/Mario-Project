@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Wed Nov 03 13:07:36 PDT 2021
+#Thu Nov 04 14:03:22 PDT 2021
 target4.type=ClassTarget
 dependency3.from=MyWorld
 target3.height=50
@@ -52,8 +52,8 @@ target2.type=ClassTarget
 target2.y=70
 target2.x=70
 class.MyWorld.superclass=greenfoot.World
-mainWindow.y=51
-mainWindow.x=-14
+mainWindow.y=126
+mainWindow.x=432
 dependency1.from=MyWorld
 target1.y=70
 editor.fx.0.height=700
@@ -69,7 +69,7 @@ target4.width=80
 dependency2.from=Mario
 dependency2.type=UsesDependency
 world.lastInstantiated=MyWorld
-mainWindow.height=681
+mainWindow.height=618
 target2.showInterface=false
 editor.swing.0.height=771
 target3.name=Mario
