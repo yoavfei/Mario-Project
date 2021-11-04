@@ -32,9 +32,9 @@ public class Mario extends Actor
         }
         if(Greenfoot.isKeyDown("up")){
             timer++;
-            if(timer<10){
+            if(timer<3){
             
-                velocity = 10;
+                velocity = 15;
                 setLocation(getX(), getY()-velocity);
                 
             }
