@@ -9,7 +9,10 @@ public class Mario extends Actor
     private int velocity =0;
     private int timer = 0;
     
-  
+    private int length = -2;
+    private int currentLength = 0;
+    
+    private ArrayList<Platform> platList = new ArrayList<Platform>();
     
     public Mario(int speed){
         this.speed = speed;
@@ -23,12 +26,21 @@ public class Mario extends Actor
         
         if(Greenfoot.isKeyDown("right")){
            move(speed);
-           adjust(speed);
-           formPlatform();
+           
+           length++;
+           if(currentLength>length){
+                formPlatform();
+                length = 0;
+           }
+           else{
+               movePlatforms(speed);
+            }
         }
         else if(Greenfoot.isKeyDown("left")){
             move(speed*-1);
-            adjust(-speed);
+            
+            length--;
+            movePlatforms(speed);
         }
         if(Greenfoot.isKeyDown("up")){
             timer++;
@@ -53,24 +65,30 @@ public class Mario extends Actor
         
     }  
     
-    public void adjust(int num){
-        
+    //1 is right, -1 is left
+    public void movePlatforms(int side){
+        for(int i = 0; i<platList.size();i++){
+             System.out.println(platList.size());
+            platList.get(i).move(side);
+           
+        }
         
     }
     
     public void formPlatform(){
-        
-        
-        
-        
+
         int height = (int)(Math.random()*200)+100;
+       
+        length = (int)(Math.random()*500)+10;
+        Platform plat = new Platform(height, length);
+         
+        platList.add(plat);
+        
+        
+        getWorld().addObject(plat, getWorld().getWidth()-20, height);
+        plat.makeGrass();
+        
 
-        getWorld().addObject(new Platform(height), getWorld().getWidth()-20, height);
-
-        
-        
-        
-        
     }
     
     

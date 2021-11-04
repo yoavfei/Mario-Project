@@ -12,5 +12,11 @@ public class Grass extends Actor
     public void act() 
     {
         // Add your action code here.
-    }    
+    } 
+    
+    public void move(int side){
+        move(side);
+        System.out.println("oink");
+        
+    }
 }

@@ -1,7 +1,11 @@
 #BlueJ class context
 comment0.target=Platform
-comment1.params=height
-comment1.target=Platform(int)
+comment1.params=height\ length
+comment1.target=Platform(int,\ int)
 comment2.params=
 comment2.target=void\ act()
-numComments=3
+comment3.params=side
+comment3.target=void\ move(int)
+comment4.params=
+comment4.target=void\ makeGrass()
+numComments=5
